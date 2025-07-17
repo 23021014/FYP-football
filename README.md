@@ -13,12 +13,14 @@
 ```bash
 cd "C:\Users\23021014\Downloads\fyp"
 npm install
-Set up environment variables
-Create a .env file in the root folder and add:
+```
 
-ini
-Copy
-Edit
+---
+
+## Set up environment variables
+
+Create a `.env` file in the root folder and add:
+```
 # PayPal Configuration
 PAYPAL_CLIENT_ID=your_paypal_client_id
 PAYPAL_CLIENT_SECRET=your_paypal_client_secret
@@ -44,43 +46,50 @@ DB_NAME=mydb
 SESSION_SECRET=your_session_secret
 PORT=3000
 NODE_ENV=development
-⚠️ Remember to add .env to .gitignore and never commit secrets to GitHub.
+```
 
-Set up the database
-Start MySQL with XAMPP
+> Remember to add `.env` to `.gitignore` and never commit secrets to GitHub.
 
-Create the database:
+---
 
-sql
-Copy
-Edit
+## Set up the database
+
+1. Start MySQL with XAMPP  
+2. Create the database:
+```sql
 CREATE DATABASE mydb;
-Run all SQL files from the /database folder using phpMyAdmin or the CLI.
+```
+3. Run all SQL files from the `/database` folder using phpMyAdmin or the CLI.
 
-Run the app
+---
+
+## Run the app
+
 Using Nodemon (for development):
-
-bash
-Copy
-Edit
+```bash
 npx nodemon app.js
+```
+
 Or with plain Node:
-
-bash
-Copy
-Edit
+```bash
 node app.js
-Open your browser and go to:
-http://localhost:3000
+```
 
-Tech Stack
-Component	Package/Tool Used
-Server Framework	express@5.1.0
-Templating	ejs@3.1.10
-MySQL Connection	mysql2@3.14.1
-Authentication	express-session@1.18.1
-Input Validation	express-validator@7.2.1
-Email Service	nodemailer@6.10.1
-Payment Gateway	stripe@18.3.0, @paypal/checkout-server-sdk@1.0.3
-Environment Vars	dotenv@16.5.0
-Dev Tool	nodemon@3.1.10
+Open your browser and go to:  
+**http://localhost:3000**
+
+---
+
+## Tech Stack
+
+| Component         | Package/Tool Used                          |
+|-------------------|--------------------------------------------|
+| Server Framework  | express@5.1.0                              |
+| Templating        | ejs@3.1.10                                 |
+| MySQL Connection  | mysql2@3.14.1                              |
+| Authentication    | express-session@1.18.1                    |
+| Input Validation  | express-validator@7.2.1                   |
+| Email Service     | nodemailer@6.10.1                          |
+| Payment Gateway   | stripe@18.3.0, @paypal/checkout-server-sdk@1.0.3 |
+| Environment Vars  | dotenv@16.5.0                              |
+| Dev Tool          | nodemon@3.1.10                             |
