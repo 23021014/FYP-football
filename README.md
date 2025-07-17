@@ -1,53 +1,76 @@
-How to run the application
-Requirements:
-Windows OS
-Node.js (v18+ recommended)
-npm
-MySQL server (e.g., XAMPP)
-Internet access
+# Football Club Management System: How to run the application
 
-Install dependencies
+## Requirements
+- Windows OS  
+- Node.js (v18+ recommended)  
+- npm  
+- MySQL server (e.g., XAMPP)  
+- Internet access  
+
+---
+
+## Install dependencies
+```bash
 cd "C:\Users\23021014\Downloads\fyp"
 npm install
-
 Set up environment variables
-Create a .env file and add:
+Create a .env file in the root folder and add:
 
-PAYPAL_CLIENT_ID=your_paypal_client_id  
-PAYPAL_CLIENT_SECRET=your_paypal_client_secret  
+ini
+Copy
+Edit
+# PayPal Configuration
+PAYPAL_CLIENT_ID=your_paypal_client_id
+PAYPAL_CLIENT_SECRET=your_paypal_client_secret
 
-STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key  
-STRIPE_SECRET_KEY=your_stripe_secret_key  
+# Stripe Configuration
+STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key
+STRIPE_SECRET_KEY=your_stripe_secret_key
 
-EMAIL_HOST=smtp.gmail.com  
-EMAIL_PORT=587  
-EMAIL_USER=your_email@gmail.com  
-EMAIL_PASS=your_email_app_password  
-EMAIL_FROM="Raffles Rangers" <your_email@gmail.com>  
+# Email Configuration
+EMAIL_HOST=smtp.gmail.com
+EMAIL_PORT=587
+EMAIL_USER=your_email@gmail.com
+EMAIL_PASS=your_email_app_password
+EMAIL_FROM="Raffles Rangers" <your_email@gmail.com>
 
-DB_HOST=localhost  
-DB_USER=root  
-DB_PASSWORD=  
-DB_NAME=mydb  
+# Database Configuration
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=
+DB_NAME=mydb
 
-SESSION_SECRET=your_session_secret  
-PORT=3000  
-NODE_ENV=development  
+# App Configuration
+SESSION_SECRET=your_session_secret
+PORT=3000
+NODE_ENV=development
+⚠️ Remember to add .env to .gitignore and never commit secrets to GitHub.
 
 Set up the database
 Start MySQL with XAMPP
+
 Create the database:
 
+sql
+Copy
+Edit
 CREATE DATABASE mydb;
-
-Run all SQL files from /database folder in phpMyAdmin or CLI
+Run all SQL files from the /database folder using phpMyAdmin or the CLI.
 
 Run the app
 Using Nodemon (for development):
+
+bash
+Copy
+Edit
 npx nodemon app.js
-Or using plain Node:
+Or with plain Node:
+
+bash
+Copy
+Edit
 node app.js
-Open in browser:
+Open your browser and go to:
 http://localhost:3000
 
 Tech Stack
